@@ -2,8 +2,8 @@ import instance from "api/config";
 import { IItemProfilesResponseOfGetApi, IItemProfileResponseOfPostApi } from "./types";
 
 export const getProfilesApi = async () => {
-  const response = await instance.get<IItemProfilesResponseOfGetApi[]>('/profiles');
-  return response.data;
+    const response = await instance.get<IItemProfilesResponseOfGetApi[]>('/profiles');
+    return response.data;
 };
 
 export const getOneProfileApi = async (id: number) => {
