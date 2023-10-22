@@ -11,7 +11,7 @@ const NotFoundPage = React.lazy(() => import('pages/NotFoundPage'));
 const Loading = () => <>Прогрузка страницы...</>
 
 export default function App() {
-	return (
+  return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
@@ -42,5 +42,5 @@ export default function App() {
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
-	)
+  ) 
 }
