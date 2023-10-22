@@ -11,36 +11,36 @@ const NotFoundPage = React.lazy(() => import('pages/NotFoundPage'));
 const Loading = () => <>Прогрузка страницы...</>
 
 export default function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route
-          path="/counter"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <CounterPage />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/profiles"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <ProfilesPage />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/two-messages"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <MessagesPage />
-            </React.Suspense>
-          }
-        />
-        <Route path="*" element={<NotFoundPage />} />
-      </Route>
-    </Routes>
-  ) 
+    return (
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route
+            path="/counter"
+            element={
+              <React.Suspense fallback={<Loading />}>
+                <CounterPage />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/profiles"
+            element={
+              <React.Suspense fallback={<Loading />}>
+                <ProfilesPage />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/two-messages"
+            element={
+              <React.Suspense fallback={<Loading />}>
+                <MessagesPage />
+              </React.Suspense>
+            }
+          />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    ) 
 }
