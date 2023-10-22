@@ -1,3 +1,3 @@
 export interface IMessageResponseOfGetApi {
-	message: string;
+		message: string;
 }

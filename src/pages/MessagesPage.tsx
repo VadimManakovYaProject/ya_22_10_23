@@ -14,15 +14,15 @@ export default function MessagesPage() {
 
 	const handleTwoRequests = React.useCallback(() => {
 		Promise.allSettled([
-			fetchFirstMessage(), 
-			fetchSecondaryMessage()
+				fetchFirstMessage(), 
+				fetchSecondaryMessage()
 		]).then((response) => {
-			const [r1, r2] = response as any;
-			setResultText(`Текст от запроса №1: ${r1.value.message}; Текст от запроса №2: ${r2.value.message} - в одном результате`)
+				const [r1, r2] = response as any;
+				setResultText(`Текст от запроса №1: ${r1.value.message}; Текст от запроса №2: ${r2.value.message} - в одном результате`)
 		}).catch((error) => {
-			// обработка ошибки, если
+				// обработка ошибки, если
 		}).finally(() => {
-			// 
+				// 
 		});
 	}, []);
 
