@@ -10,7 +10,7 @@ export default function CounterPage() {
       <Grid container alignItems={"center"} justifyContent={"center"} spacing={2}>
         <Grid item>
           <IconButton onClick={handleDecriment} size="large">
-          <RemoveCircleOutlineIcon />
+            <RemoveCircleOutlineIcon />
           </IconButton>
         </Grid>
         <Grid item>
