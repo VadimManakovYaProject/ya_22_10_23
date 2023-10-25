@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 
 export default React.memo(function Navigation() {
     const location = useLocation();
-    const currentTab = location?.pathname || '/';
+    const currentTab = location?.pathname || '/counter';
 
     return (
       <Tabs value={currentTab}>
